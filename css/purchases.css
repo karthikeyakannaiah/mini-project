@@ -41,21 +41,44 @@ nav > h3 > a {
 #active {
   color: black;
 }
+@keyframes pop {
+  0% {
+    padding: 1%;
+  }
+  25% {
+    padding: 2%;
+  }
+  50% {
+    padding: 3%;
+  }
+  75% {
+    padding: 4%;
+  }
+  100% {
+    padding: 5%;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
-  margin: 10% 30%;
-  padding: 2%;
+  margin: 8% 30%;
+  padding: 5%;
+  border-radius: 50px;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: pop;
+  animation-duration: 0.5s;
 }
 form input {
   margin: 2%;
+  padding: 2%;
 }
 form select {
+  padding: 2%;
   margin: 2%;
 }
 .back {
+  text-align: center;
   font-size: larger;
 }
 .back > a {

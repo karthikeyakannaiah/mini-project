@@ -21,22 +21,16 @@
             } else {
                 echo 'failed';
             }
-            $purid = 0;
-            $sql = 'SELECT COUNT(*) FROM orderstest;';
+            $email = $_POST['email'];
+            $sql = 'SELECT * FROM orderstest WHERE email = "$email;"';
             $retval= mysqli_query($conn, $sql);
             if (!$retval) {
                 die("Could not get the data".mysqli_error($conn));
             }
             while ($row = mysqli_fetch_array($retval)){
-                 $purid = $row['COUNT(*)'] + 1;
+                 echo $row['Purchase'].'<br>';
             }
-            $email = $_POST['email'];
-            $product = $_POST['product'];
-            $sql = "INSERT INTO orderstest values ($purid,'$email', '$product')";
-            if (mysqli_query($conn, $sql) == TRUE){
-                echo '<h3 class="back">Purchase Successful <a href="../index.html">Go back</a><br>
-                    <a class="back" href="orders.html">orders</a></h3>';
-            }
+            echo 'workin';
             
             mysqli_close($conn);
         ?>
