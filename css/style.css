@@ -1,0 +1,113 @@
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  box-sizing: border-box;
+  background-color: purple;
+  font-family: "Ubuntu", sans-serif;
+  animation-name: start;
+  animation-duration: 1s;
+}
+.products {
+  margin: 20px;
+}
+nav {
+  margin: 2% 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+nav > h3 :hover {
+  font-size: medium;
+}
+nav > h3 > a {
+  text-decoration: none;
+  color: white;
+}
+#title {
+  color: gold;
+}
+.lgdiv {
+  display: block;
+  padding: 10%;
+  margin: 2% 20%;
+  text-align: center;
+  background: url("../images/lgndivbg.jpg");
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.lgdiv h4 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2%;
+  border-radius: 100px;
+  opacity: 1;
+  font-size: xx-large;
+  animation-name: pop;
+  animation-duration: 0.5s;
+}
+.lgdiv h4 {
+  padding: 3%;
+}
+@keyframes pop {
+  0% {
+    font-size: medium;
+  }
+  25% {
+    font-size: large;
+  }
+  50% {
+    font-size: larger;
+  }
+  75% {
+    font-size: x-large;
+  }
+  100% {
+    font-size: xx-large;
+  }
+}
+#scroll {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5%;
+  width: 5%;
+}
+.products {
+  margin: 10% 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5%;
+  border-radius: 20px;
+}
+.product {
+  padding: 20px;
+  display: flex;
+}
+.imgprd > img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10rem;
+  width: 12rem;
+}
+.tagprod {
+  color: gold;
+  padding: 5%;
+}
