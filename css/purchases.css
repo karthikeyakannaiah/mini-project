@@ -1,0 +1,64 @@
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  box-sizing: border-box;
+  background-color: purple;
+  font-family: "Ubuntu", sans-serif;
+  animation-name: start;
+  animation-duration: 1s;
+}
+nav {
+  margin: 2% 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+nav > h3 :hover {
+  font-size: medium;
+}
+nav > h3 > a {
+  text-decoration: none;
+  color: white;
+}
+#title {
+  color: gold;
+}
+#active {
+  color: black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 30%;
+  padding: 2%;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+form input {
+  margin: 2%;
+}
+form select {
+  margin: 2%;
+}
+.back {
+  font-size: larger;
+}
+.back > a {
+  text-decoration: none;
+  color: gold;
+}
