@@ -22,7 +22,7 @@
                 echo 'failed';
             }
             $purid = 0;
-            $sql = 'SELECT COUNT(*) FROM orderstest;';
+            $sql = 'SELECT COUNT(*) FROM jewellery;';
             $retval= mysqli_query($conn, $sql);
             if (!$retval) {
                 die("Could not get the data".mysqli_error($conn));
@@ -32,7 +32,18 @@
             }
             $email = $_POST['email'];
             $product = $_POST['product'];
-            $sql = "INSERT INTO orderstest values ($purid,'$email', '$product')";
+            echo $product;
+            $price = 0;
+            if ($product == "Earring"){
+                $price = 30000;
+            } elseif ($product == "Gold Bangles") {
+                $price = 92000;
+            } elseif ($product == "Necklace") {
+                $price = 180000;
+            } else {
+                $price = 300000;
+            }
+            $sql = "INSERT INTO jewellery(pur_id, email, Purchase, Price) values ($purid,'$email', '$product', '$price')";
             if (mysqli_query($conn, $sql) == TRUE){
                 echo '<h3 class="back">Purchase Successful <a href="../index.html">Go back</a><br>
                     <a class="back" href="orders.html">orders</a></h3>';
@@ -42,3 +53,13 @@
         ?>
     </body>
 </html>
+
+<!--
+        CREATE TABLE jewellery (
+            pur_id INT PRIMARY KEY,
+            email VARCHAR(50),
+            Purchase VARCHAR(50),
+            Price INT,
+            reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        );
+-->
